@@ -9,23 +9,30 @@
  */
 angular.module('spafelizApp').controller('DetailCtrl', detailCtrl); 
 
-mainCtrl.$inject = ['spaServices'];
+detailCtrl.$inject = ['$state', 'spaServicesHttp'];
 
-function detailCtrl(spaServices) {
+function detailCtrl($state, spaServicesHttp) {
 
   var vm = this;
   vm.$onInit = onInit;
   vm.idServicio = '1';
-  vm.loadSpaServices = loadSpaServices;
+  vm.loadSpaServicesHttp = loadSpaServicesHttp;
 
   function onInit(){
-    vm.loadSpaServices();
+    vm.loadSpaServicesHttp();
     
   }
 
-  function loadSpaServices(){
-    vm.service = spaServices.getServiceById(vm.idServicio);
-    //console.log(vm.serviceList);
+  function loadSpaServicesHttp(){
+    console.log('Start loadSpaServicesHttp');
+    spaServicesHttp.getById($state.params.id)
+    .then(function(result){
+      vm.serviceList = result.data
+    })
+    .catch(function(err){
+      console.log(err)
+    })
+    console.log('End loadSpaServicesHttp');
   }
 
 };

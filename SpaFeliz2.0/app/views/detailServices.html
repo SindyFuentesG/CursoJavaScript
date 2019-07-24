@@ -1,11 +1,11 @@
 <div class="jumbotron">
-    <div class="row marketing" nf-if="vm.service != null">
-            <h4>Nombre del servicio:</h4>
-            <p>{{vm.service.name}}</p>
-            <h4>Valor del servicio:</h4>
-            <p>{{vm.service.cost}}</p>
-            <h4>Descripción del servicio:</h4>
-            <p>{{vm.service.description}}</p>
-
+    <h1>Spa Feliz !El cuidado y tu bienestar¡</h1>
+</div>
+<div class="container" ng-if="vm.serviceList != null">
+    <div ng-style="{ 'background': 'url({{vm.serviceList.image}})' }">
+        <h2>Descripción del servicio </h2> 
+        <p>Nombre del servicio: {{vm.serviceList.name}}</p>
+        <p>Valor del servicio: COP {{vm.serviceList.cost}}</p>
+        <p>Descripción del servicio: {{vm.serviceList.description}}</p>
     </div>
 </div>

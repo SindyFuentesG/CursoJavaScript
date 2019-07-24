@@ -45,6 +45,9 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
+  background: url('https://pur.vamtam.com/wp-content/uploads/2017/11/Header-shop.jpg');
+  min-height: 300px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 .jumbotron .btn {
   font-size: 21px;

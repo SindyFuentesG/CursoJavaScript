@@ -13,7 +13,8 @@ angular.module('spafelizApp')
 
     services:{
       all: 'services',
-      byId: 'services/'
+      byId: 'services/',
+      reserva: 'reservas'
 
     }
   });

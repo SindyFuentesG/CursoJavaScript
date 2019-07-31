@@ -14,7 +14,8 @@ spaServicesHttp.$inject = ['$http', '$q', 'httpConfig'];
 function spaServicesHttp ($http, $q, httpConfig){
   let services = {
     getAll: getAll,
-    getById: getById
+    getById: getById,
+
 
   }
 
@@ -52,10 +53,8 @@ function spaServicesHttp ($http, $q, httpConfig){
       defered.reject(error);
     });
     return promise;
-
-
-
   }
+
 }
 
 
